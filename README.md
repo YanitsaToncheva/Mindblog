@@ -190,6 +190,7 @@
  - [x] Fix navigation link in details
  - [x] Add get edit action
  - [x] Show empty edit page
+ - [x] Populate edit form with blog data
 
 ### BONUS
  - [] Fix sort(_id) problem 

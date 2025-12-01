@@ -64,10 +64,14 @@ blogController.get('/:blogId/delete', isAuth, async (req, res) => {
 });
 
 blogController.get('/:blogId/edit', async (req, res) => {
-    res.render('blogs/edit');
+    const blogId = req.params.blogId;
+    const blog = await blogService.getOne(blogId);
+    
+    res.render('blogs/edit', { blog });
 });
 
 blogController.post('/:blogId/edit', async (req, res) => {
+
     const blogId = req.params.blogId;
     const blogData = req.body;
     const userId = req.user.id;
