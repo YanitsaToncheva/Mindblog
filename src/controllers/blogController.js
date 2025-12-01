@@ -60,6 +60,7 @@ blogController.get('/:blogId/delete', isAuth, async (req, res) => {
     const userId = req.user.id;
 
     await blogService.remove(blogId,userId);
+    res.redirect('/');
 })
 
 export default blogController;
