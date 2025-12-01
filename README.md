@@ -182,8 +182,15 @@
  - [x] Show follow button or already following buttons conditionally
 
 ### Delete blog
- - [x] Fix navigation link
+ - [x] Fix navigation link in details
  - [x] Add delete action
  - [x] Add delete method in blog service
+
+### Edit blog
+ - [] Fix navigation link in details
+ - [] Add edit action
+ - [] Add edit method in blog service
+
 ### BONUS
  - [] Fix sort(_id) problem 
+
