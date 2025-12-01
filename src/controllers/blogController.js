@@ -53,7 +53,7 @@ blogController.get('/:blogId/follow', isAuth, async (req, res) => {
 
     await blogService.follow(blogId, userId);
     res.redirect(`/blogs/${blogId}/details`);
-})
+});
 
 blogController.get('/:blogId/delete', isAuth, async (req, res) => {
     const blogId = req.params.blogId;
@@ -61,6 +61,23 @@ blogController.get('/:blogId/delete', isAuth, async (req, res) => {
 
     await blogService.remove(blogId,userId);
     res.redirect('/');
-})
+});
+
+blogController.get('/:blogId/edit', async (req, res) => {
+    res.render('blogs/edit');
+});
+
+blogController.post('/:blogId/edit', async (req, res) => {
+    const blogId = req.params.blogId;
+    const blogData = req.body;
+    const userId = req.user.id;
+
+    try {
+        await blogService.edit(blogId, blogData);
+        res.redirect(`/blogs/${blogId}/details`);
+    } catch (err) {
+        
+    }
+});
 
 export default blogController;

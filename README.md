@@ -187,9 +187,9 @@
  - [x] Add delete method in blog service
 
 ### Edit blog
- - [] Fix navigation link in details
- - [] Add edit action
- - [] Add edit method in blog service
+ - [x] Fix navigation link in details
+ - [x] Add get edit action
+ - [x] Show empty edit page
 
 ### BONUS
  - [] Fix sort(_id) problem 

@@ -37,3 +37,7 @@ export function remove(blogId, userId) {
     return Blog.findByIdAndDelete(blogId);
 }
 
+export function edit(blogId, blogData) {
+    return Blog.findByIdAndUpdate(blogId, blogData, { runValidators: true });
+}
+
