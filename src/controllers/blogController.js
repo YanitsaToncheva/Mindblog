@@ -66,7 +66,7 @@ blogController.get('/:blogId/delete', isAuth, async (req, res) => {
 blogController.get('/:blogId/edit', async (req, res) => {
     const blogId = req.params.blogId;
     const blog = await blogService.getOne(blogId);
-    
+
     res.render('blogs/edit', { blog });
 });
 
@@ -80,7 +80,10 @@ blogController.post('/:blogId/edit', async (req, res) => {
         await blogService.edit(blogId, blogData);
         res.redirect(`/blogs/${blogId}/details`);
     } catch (err) {
-        
+        res.render('blogs/edit', {
+            blog: blogData,
+            error: getErrorMessage(err),
+        })
     }
 });
 

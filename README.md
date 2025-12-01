@@ -191,6 +191,9 @@
  - [x] Add get edit action
  - [x] Show empty edit page
  - [x] Populate edit form with blog data
+ - [x] Add post edit action
+ - [x] Add edit method in blog service
+ - [x] Add error handling
 
 ### BONUS
  - [] Fix sort(_id) problem 
