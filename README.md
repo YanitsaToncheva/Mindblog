@@ -200,6 +200,7 @@
  - [x] Fix navigation link
  - [x] Show static profile page
  - [x] Show dynamic user information
+ - [x] Get created blogs count
 
 
 ### BONUS
