@@ -33,7 +33,12 @@ export function follow(blogId, userId) {
 
 }
 
-export function remove(blogId, userId) {
+export async function remove(blogId, userId) {
+    const blog = await Blog.findById(blogId);
+
+    if (!blog.owner.equals(userId)) {
+        throw new Error('Cannot delete if not owner');
+    }
     return Blog.findByIdAndDelete(blogId);
 }
 
