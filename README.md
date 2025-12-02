@@ -199,6 +199,7 @@
 
  - [x] Fix navigation link
  - [x] Show static profile page
+ - [x] Show dynamic user information
 
 
 ### BONUS
