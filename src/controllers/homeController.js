@@ -16,8 +16,9 @@ homeController.get('/profile', isAuth, async (req, res) => {
     const userId = req.user.id;
     
     const createdBlogs = await blogService.getAllByOwner(userId);
+    const followedBlogs = await blogService.getAllByFollower(userId);
     
-    res.render('profile', { createdBlogs, });
+    res.render('profile', { createdBlogs, followedBlogs });
 });
 
 

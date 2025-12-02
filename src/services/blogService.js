@@ -50,3 +50,8 @@ export function getAllByOwner(ownerId) {
     return Blog.find({owner: ownerId});
 }
 
+export function getAllByFollower(followerId) {
+    return Blog.find().in('followers', followerId);
+
+}
+
