@@ -195,6 +195,12 @@
  - [x] Add edit method in blog service
  - [x] Add error handling
 
+ ### Profile
+
+ - [x] Fix navigation link
+ - [] Show static profile page
+
+
 ### BONUS
  - [] Fix sort(_id) problem 
 
