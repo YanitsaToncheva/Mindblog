@@ -198,7 +198,7 @@
  ### Profile
 
  - [x] Fix navigation link
- - [] Show static profile page
+ - [x] Show static profile page
 
 
 ### BONUS

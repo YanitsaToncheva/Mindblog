@@ -11,6 +11,9 @@ homeController.get('/', async (req, res) => {
     res.render('home', { blogs: latestBlogs});
 });
 
+homeController.get('/profile', async (req, res) => {
+    res.render('profile');
+});
 
 
 export default homeController;
